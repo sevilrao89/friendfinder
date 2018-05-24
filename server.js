@@ -11,7 +11,7 @@ app.use(bodyParser.urlencoded({extended: false}))
 app.use("/api",apiRoutes)
 app.use("/",htmlRoutes) 
 app.use(express.static("./app/public"))
-app.listen(3000,function(){
+app.listen(process.env.PORT || 3000,function(){
   console.log("app.listen on port 3000")
 
 
